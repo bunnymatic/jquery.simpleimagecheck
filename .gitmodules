@@ -1,0 +1,3 @@
+[submodule "specit"]
+	path = specit
+	url = http://github.com/joshuaclayton/specit.git
