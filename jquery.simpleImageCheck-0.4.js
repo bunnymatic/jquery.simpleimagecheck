@@ -63,6 +63,10 @@
   };
   
   var setup = function(n, o) {
+    // wasChecked option persists checked state
+    if (o.wasChecked) {
+        n.prop('checked', true);
+    }
     var c = n.is(':checked');
     var src = o.image;
     if (c) { src = o.imageChecked; }
