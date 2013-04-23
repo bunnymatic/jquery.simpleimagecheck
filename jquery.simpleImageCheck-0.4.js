@@ -64,9 +64,8 @@
   
   var setup = function(n, o) {
     // wasChecked option persists checked state
-    if (o.wasChecked) {
-        n.prop('checked', true);
-    }
+    o.wasChecked ? n.prop('checked', true) : n.prop('checked', false);
+
     var c = n.is(':checked');
     var src = o.image;
     if (c) { src = o.imageChecked; }
@@ -138,6 +137,10 @@
   var handleClick = function(n, im, o, inputClick) {
     // determine if we need to check input box. i.e. if input is 
     // checked and img has 'checked' class, need to flip it
+    
+    // take wasClicked option state into account
+    o.wasChecked || im.hasClass('checked') ? n.prop('checked', false) : n.prop('checked', true);
+    
     if (im.hasClass('checked') === n.is(':checked') && !inputClick) {
       n.trigger('click', [true]).change();
     }
