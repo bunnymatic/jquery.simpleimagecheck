@@ -2,6 +2,8 @@
 
 SimpleImageCheck is a jQuery plug-in that makes custom image checkboxes and radio buttons super easy. Simply use standard inputs and labels for your fields, then call the function to set up the custom UI. Your checkbox (or radio button) is still there (just hidden), and all form submissions will work as normal.
 
+New Feature:  add initial state with `wasChecked` input parameter.
+
 ## Requirements
  * jQuery 1.2+
  * jquery.simpleImageCheck (this plug-in)
@@ -40,3 +42,6 @@ Original source available at http://jordankasper.com/jquery/imagecheck/
 Authors: 
  * Jordan Kasper (jquery@jordankasper.com)
  * Mr Rogers (mrrogers@bunnymatic.com)
+
+Contributors:
+ * [jewelsjacobs](https://github.com/jewelsjacobs)
