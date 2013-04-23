@@ -4,6 +4,18 @@ SimpleImageCheck is a jQuery plug-in that makes custom image checkboxes and radi
 
 New Feature:  add initial state with `wasChecked` input parameter.
 
+## Sample Usage
+    $('#myCheckbox').simpleImageCheck({
+      image: 'unchecked.png',
+      imageChecked: 'check.png', 
+      wasChecked: true,
+      afterCheck: function(isChecked) {
+        if (isChecked) {
+          // do something
+        }
+      }
+    });
+
 ## Requirements
  * jQuery 1.2+
  * jquery.simpleImageCheck (this plug-in)
@@ -25,17 +37,6 @@ New Feature:  add initial state with `wasChecked` input parameter.
  * All versions of IE (that I tested) have an issue when you attach a "change" event handler to the input node (otherwise you're fine). You will have to click on the image/checkbox multiple times in order to "tick" the box.
  * WORKAROUND: In order to get around this issue, you can use the "afterCheck" event handler option when instantiating the simpleImageCheck plugin:
 
-<code>
-$('#myCheckbox').simpleImageCheck({
-  image: 'unchecked.png',
-  imageChecked: 'check.png',
-  afterCheck: function(isChecked) {
-  if (isChecked) {
-    // do something
-  }
-  }
-});
-</code>
 
 Original source available at http://jordankasper.com/jquery/imagecheck/
 
